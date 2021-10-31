@@ -10,7 +10,7 @@ namespace Login
 {
    public class ConexionDB
     {
-        readonly string cadena = " Data Source=.;Initial Catalog=Login; Intregrated Security=true ";
+        readonly string cadena = " Data Source=DESKTOP-OR2F9BV;Initial Catalog=Login; Integrated Security=true ";
 
         public bool ValidarUsuario(Usuario user)
         {
@@ -19,7 +19,7 @@ namespace Login
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" SELECT 1 FROM USUARIO WHERE USUARIO = @User AND Clave = @Clave; ");
+                sql.Append(" SELECT 1 FROM USUARIO WHERE USUARIO = @User AND CLAVE = @Clave; ");
 
                 using (SqlConnection _conexion = new SqlConnection(cadena))
                 {
